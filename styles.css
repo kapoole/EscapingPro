@@ -1,3 +1,9 @@
+body {
+    margin:  0 auto;
+    font-family: Oswold;
+    font-size: 1.2em
+}
+
 .test {
     background-color: green;
     color: white;
@@ -14,6 +20,7 @@
 .navbar-brand {
     max-width: 20%;
     text-align: left;
+    transform: translateX(-10%);
 }
 
 .navbar-brand img {
@@ -35,6 +42,10 @@
     
 }
 
+.color4 {
+    background-color: #2BBBAD;
+}
+
 .color1 {
     background-color: #80643D;  /* #80643D */
     height: 50%;
@@ -48,11 +59,17 @@
 
 .whitetext {
     color: white;
+    text-align: center;
+}
+
+.nothoverwhitetext {
+    color: white;
+    text-align: center;
 }
 
 .whitetext:hover {
     font-size: 1.5em;
-    padding: .13rem;
+    padding: .05rem 0rem;
     color: #00695c;
 }
 
@@ -69,7 +86,7 @@
 .whitelogin:hover {
     background-color: #A77B54;
     color: white;
-    padding: .13rem;
+   padding: .05rem .09rem;
     font-size: 1.5em;
 }
 
@@ -82,3 +99,17 @@
     height: auto;
     position: absolute;
 }
+.marge-top {
+    margin-top: 50%;
+    padding: 2%;
+}
+
+.product {
+    font-size: 3em;
+    font-style: bold;
+}
+
+.weird {
+    background-color: #2BBBAD;
+}
+
