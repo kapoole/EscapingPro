@@ -21,6 +21,15 @@ body {
     width: 100vw;
 }
 
+.ex1cont {
+    max-width: 50%;
+}
+
+.ex1 {
+    max-width: 100%;
+    height: auto;
+}
+
 .navbar-brand {
     max-width: 20%;
     text-align: left;
@@ -150,12 +159,14 @@ body {
 
 .pricecontactbut {
     padding: 1.3em 2.45em;
+    color: white;
     background-color: #00695c;
     border-radius: 7px;
 }
 
 .pricecontactbut:hover {
     background-color: #eff3ad;
+    color: #696967;
     padding: .4em 0em;
     font-size: 1.5em;
 }
