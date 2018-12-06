@@ -160,6 +160,16 @@ body {
     font-size: 1.5em;
 }
 
+.subbut {
+    background-color: #00695c;
+    color: white;
+}
+
+.subbut:hover{
+    background-color: #eff3ad;
+    color: #696967;
+}
+
 
 /* @media only screen and (max-width: 768px) {
     /* For mobile phones: 

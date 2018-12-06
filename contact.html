@@ -69,10 +69,29 @@
         </div>
 
        
-    <div class="row">
-        
+    <div class="row  justify-content-center">
+        <div class="col-lg-5 ">
+                <form action="/app/contact.php">
+                    <div class="form-group row mt-4">
+                        <label class="col-md-3" for="input-name">Name:</label>
+                        <textarea class="form-control col-md-9" id="input-name" rows="1"></textarea>
+                    </div>
+                    <div class="form-group row mt-4">
+                        <label class="col-md-3" for="input-email">Email Address:</label>
+                        <input type="email" class="form-control col-md-9" id="input-email" placeholder="abc123@example.com">
+                    </div>
+                    <div>
+                        <label for="input-message">What feedback would you like to give us?</label>
+                        <textarea class="form-control mt-3" id="input-message" rows="6"></textarea>
+                        <button type="submit" class="btn subbut mt-3 mb-2" >Submit</button>
+                    </div>
+                
+                </form>
+        </div>
+            
     </div>
         
+    <!-- action link: /app/contact.php -->
 
         
 `   
