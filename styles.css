@@ -71,6 +71,7 @@ body {
     font-size: 1.5em;
     padding: .05rem 0rem;
     color: #00695c;
+    text-decoration: none;
 }
 
 .whitetext:visited {
