@@ -13,6 +13,10 @@ body {
     border: 5px solid green;
 }
 
+.active {
+    border: 3px solid #eff3ad;
+}
+
 .fullwidth {
     width: 100vw;
 }
@@ -85,8 +89,8 @@ body {
 }
 
 .whitelogin:hover {
-    background-color: #624C3F;
-    color: white;
+    background-color: #eff3ad;
+    color: #696967;
     padding: .05rem .09rem;
     font-size: 1.5em;
 }
@@ -139,6 +143,23 @@ body {
     color: white;
     font-size: .8em;
 }
+
+.priceborder {
+    border: 10px solid #696967;
+}
+
+.pricecontactbut {
+    padding: 1.3em 2.45em;
+    background-color: #00695c;
+    border-radius: 7px;
+}
+
+.pricecontactbut:hover {
+    background-color: #eff3ad;
+    padding: .4em 0em;
+    font-size: 1.5em;
+}
+
 
 /* @media only screen and (max-width: 768px) {
     /* For mobile phones: 
