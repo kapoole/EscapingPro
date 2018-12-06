@@ -85,9 +85,9 @@ body {
 }
 
 .whitelogin:hover {
-    background-color: #A77B54;
+    background-color: #624C3F;
     color: white;
-   padding: .05rem .09rem;
+    padding: .05rem .09rem;
     font-size: 1.5em;
 }
 
@@ -121,6 +121,15 @@ body {
 .spechonvercolornobig:hover {
     color: #00695c;
     text-decoration: none;
+}
+
+.well-contain {
+    max-width: 1%;
+}
+
+.well {
+    max-width: 100%;
+    height: auto;
 }
 
 @media only screen and (max-width: 768px) {
