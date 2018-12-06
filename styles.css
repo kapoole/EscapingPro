@@ -124,8 +124,8 @@ body {
 }
 
 .well-contain {
-    max-width: 9%;
-    transform: translateX(25%);
+    max-width: 5%;
+    transform: translateX(50%);
 }
 
 .well {
@@ -134,9 +134,15 @@ body {
 
 }
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
+.bottomfooter {
+    background-color: #00695c;
+    color: white;
+    font-size: .8em;
+}
+
+/* @media only screen and (max-width: 768px) {
+    /* For mobile phones: 
     .body {
       font-size: 50%;
     }
-}
+} */
