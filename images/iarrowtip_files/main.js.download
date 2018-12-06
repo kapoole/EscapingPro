@@ -1,0 +1,308 @@
+
+function checkMediaQueryMobile(){
+	if($(document.body).css('overflow') == 'hidden')
+		return false;
+	return true;
+}
+
+$(document).ready( function() {
+
+	// copio el contenido de #desde-42 en #hasta-42
+	$('#hasta-42').html( $('#desde-42').html() );
+
+	// masonry
+	window.gridMas = $('.grid').masonry({
+		itemSelector: '.grid-item',
+		columnWidth: '.grid-sizer',
+		percentPosition: true,
+		transitionDuration: 0
+	});
+	window.redrawMasonry = function(){ // para llamar de cualquier lado
+		window.gridMas.masonry('layout');
+	}
+	
+	// si es mobile, menu oculto por defecto
+	if(checkMediaQueryMobile()){
+		clickMenu();
+	}
+
+	var scrollingActivo = false;
+	
+	$(window).resize(function() {
+	
+		// corrijo el tamaño de las columnas
+		if(checkMediaQueryMobile()){
+			$('#left-column-main').height('auto');
+			$('#right-column-main').height('auto');
+			$('#left-column-main').width('auto');
+			$('#right-column-main').width('auto');
+		} else {
+			// alturas
+			var header_height = $('#header').outerHeight();
+			var viewportHeight = $(window).height();
+			var remaining_height = viewportHeight - header_height;
+			$('#left-column-main').height(remaining_height);
+			$('#right-column-main').height(remaining_height);
+			// anchos
+			var viewportWidth = $(window).width();
+			if($('#left-column-main').is(":visible")){
+				var ancho_left_column = 200; // px
+				$('#left-column-main').width(ancho_left_column);
+				$('#right-column-main').width(viewportWidth - ancho_left_column);
+			} else {
+				$('#right-column-main').width(viewportWidth);
+			}
+			// boton ejecutar (y noBoton)
+			var boton_width = $('#contBotEjec .boton').outerWidth(); // del boton, no del noBoton, aunque deberia ser el mismo ancho
+			$('#contBotEjec span').css('right', ($('#right-column-main').width() - boton_width) / 2);
+		}
+		
+		// corrijo el scrolling
+		if(checkMediaQueryMobile()){
+			if(scrollingActivo){
+				$('#menu').data('jsp').destroy();
+				scrollingActivo = false;
+			}
+		} else {
+			if(!scrollingActivo){
+				$('#menu').jScrollPane();
+				scrollingActivo = true;
+			}
+		}
+		
+		// corrijo el masonry
+		window.redrawMasonry();
+	});
+	
+	
+	var throttleTimeout;
+	$(window).resize(
+		function(){
+			if(scrollingActivo){
+				// IE fires multiple resize events while you are dragging the browser window which
+				// causes it to crash if you try to update the scrollpane on every one. So we need
+				// to throttle it to fire a maximum of once every 50 milliseconds...
+				if(!throttleTimeout) {
+					throttleTimeout = setTimeout(
+						function()
+						{
+							if(scrollingActivo)
+								$('#menu').data('jsp').reinitialise();
+							throttleTimeout = null;
+						},
+						50
+					);
+				}
+			}
+		}
+	);
+
+
+	// disparo el evento
+	$(window).trigger('resize');
+
+});
+
+function clickMenu(){
+	if($('#left-column-main').is(":visible")){
+		$('#left-column-main').hide();
+	} else {
+		$('#left-column-main').show();
+	}
+	$(window).trigger('resize');
+}
+
+// ###################################################################################
+
+$(document).ready( function() {
+
+	$('#grid-page-category .grid-item > div').each(function(){
+		var link = $(this).find('a').first();
+		var url = link.attr('href');
+		$(this).on('mousedown',function(eDown){
+			$(document).one('mouseup',function(eUp){
+				if(eDown.button == 0 && eUp.button == 0){
+					// left click
+					location.href = url;
+				} else {
+					if(eDown.button == 1 && eUp.button == 1){
+						// middle click
+						window.open(url, '_blank');
+					}
+				}
+			});
+		});
+	});
+
+});
+
+// ###################################################################################
+
+jQuery.fn.extend({
+	tempClass: function(classname, duration){
+		return this.each(function() {
+			var elemento = $(this);
+			elemento.addClass(classname);
+			setTimeout(function(){
+				elemento.removeClass(classname);
+			}, duration);
+		});
+	},
+	tiltClass: function(classname, how_many, period, duration){
+		return this.each(function() {
+			var elemento = $(this);
+			for(var i = 0; i < how_many; i++){
+				setTimeout(function(){
+					elemento.tempClass(classname, duration);
+				}, i * period);
+			}
+		});
+	}
+});
+
+window.funDespues = function(){ $(document.body).removeClass("ejecutando"); ejecutado(); };
+
+function ejecutarTool(){
+	var funAntes = function(){ $(document.body).addClass("ejecutando"); elemsReset(); };
+	var funDespues_ = window.funDespues;
+	execute(funAntes, funDespues_);
+}
+
+$(document).ready(function(){
+	setInterval(function(){
+		$("#contBotEjec .boton").tempClass("highlighted", 250);
+	}, 2000);
+});
+
+function elemsReset(){
+	$(".div-elemento").removeClass("error_incompleto ok_salida");
+}
+
+function elemIncompleto(id, nombre){
+	$("#div-elemento-"+id).addClass("error_incompleto");
+	$("#div-elemento-"+id).tiltClass("highlighted", 3, 500, 250);
+	// jump to incomplete element
+	jumpToElem( $("#div-elemento-"+id) );
+}
+
+function ejecutado(){
+	if($('.error_incompleto').length === 0){
+		$(".div-elemento-output").tiltClass("ok_salida", 3, 500, 250);
+		// jump to first output element
+		var salidas = $(".div-elemento-output");
+		if(salidas.length > 0)
+			jumpToElem( salidas.first() );
+	}
+}
+
+function jumpToElem(elemento){
+	//elemento[0].scrollIntoView(); //simple, sin animacion ([0] para get dom element, no jQuery)
+ 	if(!(checkMediaQueryMobile())){
+		var divOverflow = $("#right-column-main");
+		var correccion = divOverflow.offset().top - divOverflow.scrollTop();
+	} else {
+		var divOverflow = $("html, body");
+		var correccion = 0;
+	}
+	var sT = elemento.offset().top - correccion;
+	divOverflow.animate({ scrollTop: sT - 5 }, "fast");
+}
+
+// ###################################################################################
+
+function popup(contenido){
+	var ancho_caja = 375; var alto_boton_cerrar = 25; var max_alto_caja = 0.7; var max_ancho_caja = 0.9;
+	var toPx = function(x){ return ''+x+'px'; };
+	var caja = $('<div>')
+		.css({ 'position': 'fixed', 'left': '0', 'top': '0', 'z-index': '9999', 'width': toPx(ancho_caja), 'background-color': '#F5F5F5' })
+		.appendTo($(document.body));
+	var cont_link_cerrar = $('<div>')
+		.css({ 'height': toPx(alto_boton_cerrar), 'background-color': '#FFF' })
+		.appendTo(caja);
+	var div_cont_contenido = $('<div>')
+		.css('overflow', 'auto')
+		.appendTo(caja);
+	var div_contenido = $('<div>')
+		.css('padding', '10px 20px')
+		.html(contenido)
+		.appendTo(div_cont_contenido);
+	var link_cerrar = $('<span></span>')
+		.css({ 'dispay': 'block', 'float': 'right', 'height': toPx(alto_boton_cerrar), 'background-color': '#E81123', 'width': '50px', 'text-align': 'center', 'color': '#FFF', 'font-weight': 'bold', 'font-family': 'sans-serif', 'cursor': 'pointer' })
+		.css('background-image', 'url("data:image/gif;base64,R0lGODlhCgAKAIABAP3o6v///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0Y0MkRGRTBDNEI0MTFFNThFQjZBMTlGREE4QUI1OEUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0Y0MkRGRTFDNEI0MTFFNThFQjZBMTlGREE4QUI1OEUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDRjQyREZERUM0QjQxMUU1OEVCNkExOUZEQThBQjU4RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDRjQyREZERkM0QjQxMUU1OEVCNkExOUZEQThBQjU4RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAEALAAAAAAKAAoAAAIRRI5nlsGenprNyXjplS+vqhQAOw==")')
+		.css({ 'background-repeat': 'no-repeat', 'background-position': 'center' })
+		.appendTo(cont_link_cerrar);
+	var mask = $('<div>')
+		.css({ 'position': 'absolute', 'left': '0', 'top': '0', 'z-index': '9000', 'background-color': 'rgba(0, 0, 0, 0.5)' })
+		.appendTo($(document.body));
+	var ajustar = function(){
+		mask.css({ 'width': $(window).width(), 'height': $(document).height() });
+		var alto_contenido = Math.ceil(div_contenido.outerHeight() * 1.05); // margen de error
+		var ancho_caja_ = Math.min(ancho_caja, max_ancho_caja*$(window).width());
+		var alto_caja_ = Math.min(alto_contenido + alto_boton_cerrar, max_alto_caja*$(window).height());
+		caja.css({ 'width': toPx(ancho_caja_), 'height': toPx(alto_caja_) });
+		div_cont_contenido.css('height', toPx(alto_caja_-alto_boton_cerrar));
+		caja.css({ 'top': $(window).height()/2 - caja.height()/2, 'left': $(window).width()/2 - caja.width()/2 });
+	};
+	$(window).resize(ajustar);
+	var cerrar = function(){
+		$(window).unbind('resize', ajustar);
+		caja.remove();
+		mask.remove();
+	};
+	link_cerrar.click(cerrar);
+	mask.click(cerrar);
+	ajustar();
+}
+
+$(document).ready( function() {
+
+	$('.gracias').each(function(){
+		$(this).click(function(){
+			popup( $('#info-gracias').html() );
+			return false;
+		});
+	});
+
+});
+
+$(document).ready( function() {
+
+	$('.link-keywords').each(function(){
+		$(this).click(function(){
+			$('#info-keywords').slideToggle(50);
+			return false;
+		});
+	});
+
+});
+
+$(document).ready( function() {
+
+	function mostrar_aviso_cookies(){
+		$('#aviso_cookies').show();
+	}
+
+	function ocultar_aviso_cookies(){
+		cuqui_set();
+		$('#aviso_cookies').hide();
+	}
+
+	function cuqui_set(){
+		expireAfter = new Date();
+		expireAfter.setDate(expireAfter.getDate() + 365);
+		document.cookie = ['aceptarCookies = si', 'expires = ' + expireAfter, 'path = /'].join('; ');
+	}
+
+	function cuqui_get(){
+		return (document.cookie.indexOf('aceptarCookies') > -1);
+	}
+	
+	$('#aviso_cookies .a_boton_cerrar').click(function(){
+		ocultar_aviso_cookies();
+		return false;
+	});
+
+	if(!cuqui_get())
+		mostrar_aviso_cookies();
+
+});

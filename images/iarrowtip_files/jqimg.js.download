@@ -1,0 +1,635 @@
+
+// convert base64 to raw binary data held in a string
+function dataURItoBlob(dataURI) {
+	// doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
+	var byteString = atob(dataURI.split(',')[1]);
+	// separate out the mime component
+	var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+	// write the bytes of the string to an ArrayBuffer
+	var ab = new ArrayBuffer(byteString.length);
+	var ia = new Uint8Array(ab);
+	for (var i = 0; i < byteString.length; i++)
+		ia[i] = byteString.charCodeAt(i);
+	// write the ArrayBuffer to a blob, and you're done
+	return new Blob([ab], {type: mimeString});
+}
+
+
+//download.js v4.1, by dandavis; 2008-2015. [CCBY2] see http://danml.com/download.html for tests/usage
+// v1 landed a FF+Chrome compat way of downloading strings to local un-named files, upgraded to use a hidden frame and optional mime
+// v2 added named files via a[download], msSaveBlob, IE (10+) support, and window.URL support for larger+faster saves than dataURLs
+// v3 added dataURL and Blob Input, bind-toggle arity, and legacy dataURL fallback was improved with force-download mime and base64 support. 3.1 improved safari handling.
+// v4 adds AMD/UMD, commonJS, and plain browser support
+// v4.1 adds url download capability via solo URL argument (same domain/CORS only)
+// https://github.com/rndme/download
+
+(function (root, factory) {
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define([], factory);
+	} else if (typeof exports === 'object') {
+		// Node. Does not work with strict CommonJS, but
+		// only CommonJS-like environments that support module.exports,
+		// like Node.
+		module.exports = factory();
+	} else {
+		// Browser globals (root is window)
+		root.download = factory();
+  }
+}(this, function () {
+
+	return function download(data, strFileName, strMimeType) {
+
+		var self = window, // this script is only for browsers anyway...
+			u = "application/octet-stream", // this default mime also triggers iframe downloads
+			m = strMimeType || u,
+			x = data,
+			url = !strFileName && !strMimeType && x,
+			D = document,
+			a = D.createElement("a"),
+			z = function(a){return String(a);},
+			B = (self.Blob || self.MozBlob || self.WebKitBlob || z),
+			fn = strFileName || "download",
+			blob,
+			fr,
+			ajax;
+			B= B.call ? B.bind(self) : Blob ;
+
+		if(String(this)==="true"){ //reverse arguments, allowing download.bind(true, "text/xml", "export.xml") to act as a callback
+			x=[x, m];
+			m=x[0];
+			x=x[1];
+		}
+
+		if(url && url.length< 2048){ 
+			fn = url.split("/").pop().split("?")[0];
+			a.href = url; // assign href prop to temp anchor
+		  	if(a.href.indexOf(url) !== -1){ // if the browser determines that it's a potentially valid url path:
+        		var ajax=new XMLHttpRequest();
+        		ajax.open( "GET", url, true);
+        		ajax.responseType = 'blob';
+        		ajax.onload= function(e){ 
+				  download(e.target.response, fn, u);
+				};
+        		ajax.send();
+			    return ajax;
+			} // end if valid url?
+		} // end if url?
+
+		//go ahead and download dataURLs right away
+		if(/^data\:[\w+\-]+\/[\w+\-]+[,;]/.test(x)){
+			return navigator.msSaveBlob ?  // IE10 can't do a[download], only Blobs:
+				navigator.msSaveBlob(d2b(x), fn) :
+				saver(x) ; // everyone else can save dataURLs un-processed
+		}//end if dataURL passed?
+
+		blob = x instanceof B ?
+			x :
+			new B([x], {type: m}) ;
+
+		function d2b(u) {
+			var p= u.split(/[:;,]/),
+			t= p[1],
+			dec= p[2] == "base64" ? atob : decodeURIComponent,
+			bin= dec(p.pop()),
+			mx= bin.length,
+			i= 0,
+			uia= new Uint8Array(mx);
+
+			for(i;i<mx;++i) uia[i]= bin.charCodeAt(i);
+
+			return new B([uia], {type: t});
+		 }
+
+		function saver(url, winMode){
+			if ('download' in a) { //html5 A[download]
+				a.href = url;
+				a.setAttribute("download", fn);
+				a.className = "download-js-link";
+				a.innerHTML = "downloading...";
+				D.body.appendChild(a);
+				setTimeout(function() {
+					a.click();
+					D.body.removeChild(a);
+					if(winMode===true){setTimeout(function(){ self.URL.revokeObjectURL(a.href);}, 250 );}
+				}, 66);
+				return true;
+			}
+			if(typeof safari !=="undefined" ){ // handle non-a[download] safari as best we can:
+				url="data:"+url.replace(/^data:([\w\/\-\+]+)/, u);
+				if(!window.open(url)){ // popup blocked, offer direct download:
+					if(confirm("Displaying New Document\n\nUse Save As... to download, then click back to return to this page.")){ location.href=url; }
+				}
+				return true;
+			}
+			//do iframe dataURL download (old ch+FF):
+			var f = D.createElement("iframe");
+			D.body.appendChild(f);
+			if(!winMode){ // force a mime that will download:
+				url="data:"+url.replace(/^data:([\w\/\-\+]+)/, u);
+			}
+			f.src=url;
+			setTimeout(function(){ D.body.removeChild(f); }, 333);
+		}
+
+		if (navigator.msSaveBlob) { // IE10+ : (has Blob, but not a[download] or URL)
+			return navigator.msSaveBlob(blob, fn);
+		}
+
+		if(self.URL){ // simple fast and modern way using Blob and URL:
+			saver(self.URL.createObjectURL(blob), true);
+		}else{
+			// handle non-Blob()+non-URL browsers:
+			if(typeof blob === "string" || blob.constructor===z ){
+				try{
+					return saver( "data:" +  m   + ";base64,"  +  self.btoa(blob)  );
+				}catch(y){
+					return saver( "data:" +  m   + "," + encodeURIComponent(blob)  );
+				}
+			}
+			// Blob but not URL:
+			fr=new FileReader();
+			fr.onload=function(e){
+				saver(this.result);
+			};
+			fr.readAsDataURL(blob);
+		}
+		return true;
+	}; /* end download() */
+}));
+
+function availableFileTypes(){
+	var testFileType = function(mimetype){
+		var canvas = document.createElement('canvas');
+		canvas.width = 1;
+		canvas.height = 1;
+		var content = canvas.toDataURL(mimetype).substr(0, 50); // data:image/png;base64,iVBO... (first 50 chars)
+		var ok = content.indexOf(mimetype) != -1;
+		return ok;
+	};
+	var formatos = [
+		{ mime: 'image/png', ext: 'png' },
+		{ mime: 'image/jpeg', ext: 'jpg' },
+		{ mime: 'image/bmp', ext: 'bmp' },
+		{ mime: 'image/webp', ext: 'webp' }
+	];
+	var salida = formatos.filter(function(x){ return testFileType(x.mime); });
+	return salida;
+}
+
+(function ($) {
+
+	var jqImgClass = function (el, opts, puntero) {
+	
+		var elem = $(el);
+		var settings = opts;
+		
+		if(!(settings.hasOwnProperty('download')))
+			settings.download = false;
+		
+		// codigo propio
+
+		var divCont, divBotones, divImg, imagen, divSelectArea, divSelectPointH, divSelectPointV;
+		var ratioDiv, anchoDiv, altoDiv, anchoImg, altoImg, ratioImg;
+		var actualZoom, actualW, actualH, actualPosX, actualPosY;
+		var estado = null;
+		var activarDrag, estadoDragImg;
+		var botZoomIn, botZoomOut, botZoomAj, botZoomRe, botMove, contBotsDown;
+		var canvas = null;
+		
+		ratioDiv = settings.ratio;
+		
+		var isPickPoint = function(){ return settings.pick == 'point'; }
+		var isPickArea = function(){ return settings.pick == 'area'; }
+		
+		
+		imagen = elem;
+		divCont = $('<div></div>'); divCont.attr('class', 'divCont');
+		if(isPickArea()){
+			divSelectArea = $('<div></div>').attr('class', 'divSelectArea'); // no borrar esta clase
+		}
+		if(isPickPoint()){
+			divSelectPointH = $('<div></div>').attr('class', 'divSelectPoint divSelectPointH'); // no borrar esta clase
+			divSelectPointV = $('<div></div>').attr('class', 'divSelectPoint divSelectPointV'); // no borrar esta clase
+		}
+
+
+		var iniciar = function(){
+			imagen.addClass('imgjqimg');
+			divCont.insertAfter(imagen);
+			divCont.css('overflow', 'hidden');
+			anchoDiv = divCont.width();
+			altoDiv = anchoDiv/ratioDiv;
+			divCont.css('box-sizing', 'content-box !important');
+			divBotones = $('<div></div>').attr('class', 'divBotones').css('box-sizing', 'content-box !important');
+			divBotones.insertBefore(divCont);
+				botZoomIn = $('<button></button>').attr('class', 'botjqimg botjqimgZI').click(function(){ modoZI(); }).appendTo(divBotones);
+				botZoomOut = $('<button></button>').attr('class', 'botjqimg botjqimgZO').click(function(){ modoZO(); }).appendTo(divBotones);
+				botZoomAj = $('<button></button>').attr('class', 'botjqimg botjqimgZAJ').click(function(){ modoZAJ(); }).appendTo(divBotones);
+				botZoomRe = $('<button></button>').attr('class', 'botjqimg botjqimgZRE').click(function(){ modoZRE(); }).appendTo(divBotones);
+				botMove = $('<button></button>').attr('class', 'botjqimg botjqimgM').click(function(){ modoM(); }).appendTo(divBotones);
+				if(isPickPoint())
+					botPick = $('<button></button>').attr('class', 'botjqimg botjqimgP').click(function(){ modoP(); }).appendTo(divBotones);
+				//botDebug = $('<button></button>').click(function(){ imagen.getCoord(); }).appendTo(divBotones);
+				if(settings.download){
+					contBotsDown = $('<div class="contBotsDown"></div>').appendTo(divBotones);
+					availableFileTypes().map(function(f){
+						$('<button>'+(f.ext)+'</button>').click(function(){ downloadImage(f); }).appendTo(contBotsDown);
+					});
+				}
+				$('<hr />').css({ 'clear': 'both', 'visibility': 'hidden', 'border': 'none' }).appendTo(divBotones);
+			divRelative = $('<div></div>'); divRelative.attr('class', 'divRelative');
+			divRelative.appendTo(divCont);
+			divRelative.css('position', 'relative'); // imagen flota relativa al div donde está
+			imagen.appendTo(divRelative);
+			divImg = $('<div></div>'); divImg.attr('class', 'divImg');
+			divCont.css('overflow', 'hidden');
+			anchoImg = imagen.width();
+			altoImg = imagen.height();
+			ratioImg = anchoImg/altoImg;
+			divImg.appendTo(divRelative);
+			imagen.appendTo(divImg);
+			divImg.width(anchoDiv);
+			divImg.height(altoDiv);
+			divCont.css('background-color', '#DDD');
+			imagen.css('position', 'absolute'); // imagen flota relativa al div donde está
+			imagen.css('background-color', 'transparent');
+			imagen.css('background-image', "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAGUExURczMzP///9ONFXYAAAAQSURBVAjXY2D4z4AV4RAGAH6/D/FazXqaAAAAAElFTkSuQmCC')");
+			imagen.css('background-repeat', 'repeat');
+			imagen.css('box-shadow', '3px 3px 5px 0px rgba(0, 0, 0, 0.5)');
+			setPos(0, 0);
+			actualZoom = 1;
+			ajustar();
+			
+			// iniciar en modo pick (si es pick point)
+			if(isPickPoint())
+				modoP();
+			
+			// para que no se arrastre la imagen
+			offImagen();
+			
+			if(isPickArea()){
+				divSelectArea.css('position', 'absolute'); // flota relativo al div donde está
+				divSelectArea.appendTo(divRelative);
+				divSelectArea.css('left', ''+(anchoDiv*0.3)+'px');
+				divSelectArea.css('top', ''+(altoDiv*0.3)+'px');
+				divSelectArea.width(anchoDiv*0.4);
+				divSelectArea.height(altoDiv*0.4);
+				handlesObj = {'nw': null, 'ne': null, 'sw': null, 'se': null, 'n': null, 'e': null, 's': null, 'w': null};
+				Object.keys(handlesObj).map(function(x) {
+					handlesObj[x] = $('<div class="ui-resizable-handle ui-resizable-'+x+' '+x+'grip" ></div>');
+					divSelectArea.append(handlesObj[x]);
+				});
+				divSelectArea
+					.draggable({ containment: divCont, cursor: 'move', stop: function(){ (settings.onChange)(); } })
+					.resizable({ containment: divCont, handles: handlesObj, stop: function(){ (settings.onChange)(); } });
+			}
+			
+			if(isPickPoint()){
+				divSelectPointH.css('position', 'absolute'); // flota relativo al div donde está
+				divSelectPointV.css('position', 'absolute'); // flota relativo al div donde está
+				divSelectPointH.appendTo(divRelative);
+				divSelectPointV.appendTo(divRelative);
+				divSelectPointH.css('left', '0px');
+				divSelectPointV.css('top', '0px');
+				divSelectPointH.width('100%');
+				divSelectPointV.width(1);
+				divSelectPointH.height(1);
+				divSelectPointV.height('100%');
+				divSelectPointH.css('background-color', 'blue');
+				divSelectPointV.css('background-color', 'blue');
+				divSelectPointH.css('top', ''+(altoDiv*0.5)+'px');
+				divSelectPointV.css('left', ''+(anchoDiv*0.5)+'px');
+			}
+			
+			estadoDragImg = { dragging: false, mouseX: null, mouseY: null, imgX: null, imgY: null };
+			activarDrag = function(){
+				imagen.mousedown(function(e){
+					estadoDragImg.dragging = true;
+					estadoDragImg.mouseX = e.pageX;
+					estadoDragImg.mouseY = e.pageY;
+					estadoDragImg.imgX = actualPosX;
+					estadoDragImg.imgY = actualPosY;
+					return false;
+				});
+			};
+			$(document.body).mouseup(function(e){
+				estadoDragImg.dragging = false;
+				estadoDragImg.mouseX = null;
+				estadoDragImg.mouseY = null;
+				estadoDragImg.imgX = null;
+				estadoDragImg.imgY = null;
+				return true;
+			});
+			$(document.body).mousemove(function(e){
+				if(estadoDragImg.dragging){
+					var newX = estadoDragImg.imgX + (e.pageX - estadoDragImg.mouseX);
+					var newY = estadoDragImg.imgY + (e.pageY - estadoDragImg.mouseY);
+					setPos(newX, newY);
+				}
+				return true;
+			});
+			// cargo el canvas (solo sirve para podes descargar en varios formatos)
+			var img_elem = imagen[0];
+			canvas = document.createElement('canvas');
+			canvas.width = anchoImg;
+			canvas.height = altoImg;
+			canvas.getContext('2d').drawImage(img_elem, 0, 0);
+		}
+		
+		var ajustar = function(){
+			var nuevoZoom;
+			if(ratioImg > ratioDiv){ // acorta el ancho
+				nuevoZoom = anchoDiv/anchoImg;
+			} else { // acorta el alto
+				nuevoZoom = altoDiv/altoImg;
+			}
+			if(nuevoZoom > 1)
+				nuevoZoom = 1; // no hace zoom positivo al ajustar
+			setZoom(nuevoZoom, 0, 0);
+		}
+		
+		var setZoom = function(z, xCoin, yCoin){ // _Coin: pos del div donde deben coincidir luego del zoom
+			coinImg = posDivToImg(xCoin, yCoin);
+			actualZoom = z;
+			actualW = anchoImg*actualZoom;
+			actualH = altoImg*actualZoom;
+			setTam(actualW, actualH);
+			coincidir(xCoin, yCoin, coinImg.x, coinImg.y);
+		}
+		
+		var posDivToImg = function(x, y){
+			imgX = (x - actualPosX) / actualZoom;
+			imgY = (y - actualPosY) / actualZoom;
+			return { x: imgX, y: imgY };
+		}
+		
+		var coincidir = function(xDiv, yDiv, xImg, yImg){
+			newPosX = xDiv - (xImg * actualZoom);
+			newPosY = yDiv - (yImg * actualZoom);
+			setPos(newPosX, newPosY);
+		}
+		
+		var setTam = function(x, y){
+			imagen.css('width', ''+x+'px');
+			imagen.css('height', ''+y+'px');
+		}
+		
+		var setPos = function(x, y){
+			if(anchoDiv > actualW)
+				actualPosX = (anchoDiv - actualW) / 2;
+			else {
+				if(x !== null){
+					actualPosX = x;
+					if(actualPosX > 0)
+						actualPosX = 0;
+					if(actualPosX + actualW < anchoDiv)
+						actualPosX = anchoDiv - actualW;
+				}
+			}
+			if(altoDiv > actualH)
+				actualPosY = (altoDiv - actualH) / 2;
+			else {
+				if(y !== null){
+					actualPosY = y;
+					if(actualPosY > 0)
+						actualPosY = 0;
+					if(actualPosY + actualH < altoDiv)
+						actualPosY = altoDiv - actualH;
+				}
+			}
+			imagen.css('left', ''+actualPosX+'px');
+			imagen.css('top', ''+actualPosY+'px');
+		}
+		
+		var clickZoom = function(dif, x, y){
+			setZoom(actualZoom * (1 + (dif * settings.zoomStep)), x, y);
+		}
+		
+		if(isPickPoint()){
+			var clickPick = function(x, y){
+				//var newPosX = xDiv - (xImg * actualZoom);
+				//var newPosY = yDiv - (yImg * actualZoom);
+				x--; y--; // al ser como un margin, es -1 (tmb debe corregirse al leerse!)
+				divSelectPointH.css('top', ''+y+'px');
+				divSelectPointV.css('left', ''+x+'px');
+				(settings.onChange)();
+			}
+		}
+		
+		/* ACCIONES DE LOS BOTONES */
+		
+		var cleanClasses = function(){
+			botZoomIn.removeClass('aprtdo');
+			botZoomOut.removeClass('aprtdo');
+			botMove.removeClass('aprtdo');
+			if(isPickPoint()){
+				botPick.removeClass('aprtdo');
+				divSelectPointH.removeClass('imPick');
+				divSelectPointV.removeClass('imPick');
+			}
+			imagen.removeClass('imZoomIn imZoomOut imMove imPick');
+		}
+		
+		var modoZI = function(){
+			cleanClasses();
+			if(estado == 'move')
+				offImagen();
+			if(estado == 'zoomout' || estado == 'pick')
+				divCont.off('click');
+			if(estado == 'zoomin'){
+				divCont.off('click');
+				estado = null;
+				return;
+			}
+			botZoomIn.addClass('aprtdo');
+			imagen.addClass('imZoomIn');
+			divCont.click(function(e){
+				var posX = $(this).offset().left;
+				var posY = $(this).offset().top;
+				var clickX = e.pageX - posX;
+				var clickY = e.pageY - posY;
+				clickZoom(1, clickX, clickY);
+			});
+			estado = 'zoomin';
+		}
+		
+		var modoZO = function(){
+			cleanClasses();
+			if(estado == 'move')
+				offImagen();
+			if(estado == 'zoomin' || estado == 'pick')
+				divCont.off('click');
+			if(estado == 'zoomout'){
+				divCont.off('click');
+				estado = null;
+				return;
+			}
+			botZoomOut.addClass('aprtdo');
+			imagen.addClass('imZoomOut');
+			divCont.click(function(e){
+				var posX = $(this).offset().left;
+				var posY = $(this).offset().top;
+				var clickX = e.pageX - posX;
+				var clickY = e.pageY - posY;
+				clickZoom(-1, clickX, clickY);
+			});
+			estado = 'zoomout';
+		}
+		
+		var modoZAJ = function(){
+			ajustar();
+		}
+		
+		var modoZRE = function(){
+			setZoom(1, anchoDiv/2, altoDiv/2);
+		}
+		
+		var modoM = function(){
+			cleanClasses();
+			if(estado == 'zoomin' || estado == 'zoomout' || estado == 'pick')
+				divCont.off('click');
+			if(estado == 'move'){
+				offImagen();
+				estado = null;
+				return;
+			}
+			botMove.addClass('aprtdo');
+			imagen.addClass('imMove');
+			activarDrag(); // para que el codigo esté con los demas, lo llamo desde aca
+			estado = 'move';
+		}
+		
+		if(isPickPoint()){
+			var modoP = function(){
+				cleanClasses();
+				if(estado == 'zoomin' || estado == 'zoomout')
+					divCont.off('click');
+				if(estado == 'move')
+					offImagen();
+				if(estado == 'pick'){
+					divCont.off('click');
+					divSelectPointH.removeClass('imPick');
+					divSelectPointV.removeClass('imPick');
+					estado = null;
+					return;
+				}
+				botPick.addClass('aprtdo');
+				imagen.addClass('imPick');
+				divSelectPointH.addClass('imPick');
+				divSelectPointV.addClass('imPick');
+				divCont.click(function(e){
+					var posX = $(this).offset().left;
+					var posY = $(this).offset().top;
+					var clickX = e.pageX - posX;
+					var clickY = e.pageY - posY;
+					clickPick(clickX, clickY);
+				});
+				estado = 'pick';
+			}
+		}
+		
+		var downloadImage = function(formato){
+			var contentDataUrl = canvas.toDataURL(formato.mime);
+			var contentBlob = dataURItoBlob(contentDataUrl);
+			var filename = "image." + formato.ext;
+			//$('<a></a>').attr('download', filename).attr('href', contentDataUrl).css('display', 'none').appendTo('body')[0].click();
+			download(contentBlob, filename);
+		}
+		
+		var offImagen = function(coords){
+			imagen.off('mousedown');
+			imagen.mousedown(function(e){
+				return false;
+			});
+		}
+
+		var getCoord = function(){
+			if(isPickArea()){
+				positionSel = divSelectArea.position();
+				var pos1X = positionSel.left;
+				var pos1Y = positionSel.top;
+				var pos2X = pos1X + divSelectArea.width();
+				var pos2Y = pos1Y + divSelectArea.height();
+				var pos1 = posDivToImg(pos1X, pos1Y);
+				var pos2 = posDivToImg(pos2X, pos2Y);
+				var salida = {
+					'pos1': fixCoords(pos1),
+					'pos2': fixCoords(pos2)
+				}
+				//console.log(salida);
+				return salida; // primer y ultimo pixel (incluidos!!!)
+			}
+			if(isPickPoint()){
+				var posDivH = parseInt(divSelectPointH.css('top'));
+				var posDivV = parseInt(divSelectPointV.css('left'));
+				posDivH++; posDivV++; // al ser como un margin, es +1 (tmb debe corregirse al escribirse!)
+				var posImg = posDivToImg(posDivV, posDivH);
+				var salida = fixCoords(posImg);
+				//console.log(salida);
+				return salida;
+			}
+			return {};
+		}
+		
+		var fixCoords = function(coords){ // para que caiga todo adentro de la imagen
+			var x, y;
+			x = coords.x;
+			if(x < 0) x = 0;
+			if(x > anchoImg - 1) x = anchoImg - 1;
+			y = coords.y;
+			if(y < 0) y = 0;
+			if(y > altoImg - 1) y = altoImg - 1;
+			return {
+				x: Math.round(x), y: Math.round(y)
+			}
+		}
+		
+		var offImagen = function(coords){
+			imagen.off('mousedown');
+			imagen.mousedown(function(e){
+				return false;
+			});
+		}
+		
+		var destruir = function(){
+			imagen.removeAttr('style');
+			imagen.insertAfter(divCont);
+			divCont.remove();
+			divBotones.remove();
+		}
+		
+		/* CARGAR METODO PRINCIPAL */
+		iniciar();
+		
+		puntero.valor = getCoord;
+
+		//return this; // chaining
+
+	};
+
+	/*******************************************************************************************************/
+
+	$.fn.jqImg = function (options) {
+		var opts = $.extend({}, $.fn.jqImg.defaults, options);
+		
+		var puntero = { valor: null };
+
+		var salida = this.each(function () {
+			new jqImgClass($(this), opts, puntero);
+		});
+
+		this.getCoord = puntero.valor;
+		
+		return salida;
+	}
+
+	$.fn.jqImg.defaults = {
+		pick: null, // 'area' or 'point' or null
+		ratio: 1.6,
+		zoomStep: 0.1,
+		onChange: function(){}
+	};
+
+
+})(jQuery);

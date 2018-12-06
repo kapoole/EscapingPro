@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://pinetools.com/invert-image-colors -->
+<html class="gr__pinetools_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+		<title>Invert colors online</title>
+		<meta name="description" content="Invert image colors">		
+		
+		
+		<meta name="robots" content="noodp,index,follow">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./iarrowtip_files/styles.css">
+		
+		<style>
+						#header {
+				background-color: #6FB298;
+				background-position: left center;
+				background-image: url('https://pinetools.com/files/header.png'), linear-gradient(45deg, #6FB298, #D79C5D);
+			}
+		</style>
+		
+		<link rel="shortcut icon" href="https://pinetools.com/files/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="https://pinetools.com/files/favicon.ico" type="image/x-icon">
+		
+		<link rel="canonical" href="https://pinetools.com/invert-image-colors">
+		<!-- open graph -->
+		<meta property="og:url" content="https://pinetools.com/invert-image-colors">		
+		<!--<meta property="og:type" content="website" /> o "article"-->
+		<meta property="og:title" content="Invert colors online">
+		<meta property="og:description" content="Invert image colors">		<!--<meta property="og:image" content="http://www.your-domain.com/path/image.jpg" />-->
+		<meta property="og:site_name" content="PineTools">
+
+		<meta name="twitter:site" content="@PineToolsOk">
+		<meta property="twitter:account_id" content="729808095636037632">
+		<meta property="fb:page_id" content="1739859106232099">
+		<meta property="fb:admins" content="100003315561495">
+		<!--<meta property="fb:app_id" content="..."/>-->
+		<meta property="twitter:title" content="Invert colors online">
+		<meta property="twitter:description" content="Invert image colors">		<!--<meta property="twitter:image:src" content="..." />-->
+		
+		<!-- jQuery -->
+		<script async="" src="./iarrowtip_files/analytics.js.download"></script><script src="./iarrowtip_files/cb=gapi.loaded_1" async=""></script><script src="./iarrowtip_files/cb=gapi(1).loaded_0" async=""></script><script id="facebook-jssdk" src="./iarrowtip_files/sdk.js.download"></script><script src="./iarrowtip_files/jquery.min.js.download"></script>
+		<!-- Log errors -->
+		<script>window.onerror=function(){var a=arguments;$.post("https://pinetools.com/ajax",{logjs:JSON.stringify({url:document.location.href,message:a[0],source:a[1],pos:{l:a[2],c:a[3]},stack:a[4].stack})});};</script>
+		<!-- Masonry (acomoda elementos en la pantalla) -->
+		<script src="./iarrowtip_files/masonry.pkgd.min.js.download" type="text/javascript"></script>
+		<!-- jScrollPane + otros necesarios -->
+		<script type="text/javascript" src="./iarrowtip_files/jquery.jscrollpane.min.js.download"></script>
+		<script type="text/javascript" src="./iarrowtip_files/jquery.mousewheel.js.download"></script>
+		<link type="text/css" href="./iarrowtip_files/jquery.jscrollpane.css" rel="stylesheet" media="all">
+		<!-- PRINCIPAL -->
+		<script src="./iarrowtip_files/main.js.download" type="text/javascript"></script>
+				<!-- FB -->
+		<script charset="utf-8" src="./iarrowtip_files/button.e96bb6acc0f8bda511c0c46a84ee18e4.js.download"></script><script id="_carbonads_projs" type="text/javascript" src="./iarrowtip_files/CK7D427Y.json"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_in_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_out_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bubble_pop_in{animation-duration:250ms;animation-name:fb_customer_chat_bubble_bounce_in_animation}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_v2_mobile_chat_started{0%{opacity:0;top:20px}100%{opacity:1;top:0}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}</style></head><body class="lang_en" data-gr-c-s-loaded="true"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./iarrowtip_files/7LloFuHvA7I.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<!-- GOOGLE+ -->
+		<script src="./iarrowtip_files/platform.js.download" async="" defer="" gapi_processed="true"> {lang: 'en'} </script>
+		<!-- TWITTER -->
+		<script async="" src="./iarrowtip_files/widgets.js.download" charset="utf-8"></script>
+
+
+		<script src="./iarrowtip_files/jquery-ui.min.js.download"></script>
+<script src="./iarrowtip_files/jqimg.js.download"></script>
+<script src="./iarrowtip_files/pixastic.efectos.js.download"></script>
+<link rel="stylesheet" href="./iarrowtip_files/jquery-ui.css">
+<link rel="stylesheet" href="./iarrowtip_files/jqimg.css">
+<script type="text/javascript">window.misWidgets = new Object;</script><script type="text/javascript">
+				function resetFormElement(e){
+					e.wrap('<form>').closest('form').get(0).reset();
+					e.unwrap();
+				}
+				function loadInputImage(id, tipo, nombre){
+					archivo = (document.getElementById((id + '-input'))).files[0];
+					divImage = $('#'+id+'-div-image');
+						divImage.empty();
+					imagen = document.createElement('img');
+					imagenJq = $(imagen);
+					//window.imagenJq5c085a0c98c51 = imagenJq; OJO CONthisid, esta mal
+						imagenJq.appendTo(divImage);
+						imagenJq.attr('id', id+'-image');
+					canvas = (document.getElementById(id));
+					
+					
+					imagen.onload = function(){
+						canvas.width = imagen.width;
+						canvas.height = imagen.height;
+						canvas.getContext('2d').drawImage(imagen, 0, 0);
+						// hago que la imagen se convierta en una herramienta
+						if(tipo == 'area')
+							propsJqImg = { pick: 'area', onChange: function(){ (window.misWidgets[id].onChange)(nombre+".area"); } };
+						if(tipo == 'point')
+							propsJqImg = { pick: 'point', onChange: function(){ (window.misWidgets[id].onChange)(nombre+".point"); } };
+						if(tipo == 'ninguno')
+							propsJqImg = {};
+						imagenJq.jqImg(propsJqImg);
+						window.misWidgets[id].getC = imagenJq.getCoord;
+						//window.misWidgets[id].setOnChange = function(callback_a_ejecutar){ console.log("falta un montón!!"); };
+						(window.misWidgets[id].onChange)(nombre+".image");
+						window.redrawMasonry();
+					}
+						
+					var reader = new FileReader();
+					reader.onloadend = function (){
+						imagenJq.css('width', '');
+						imagenJq.css('height', '');
+						imagenJq.css('display', '');
+						imagen.src = reader.result;
+					}
+					reader.readAsDataURL(archivo);
+				}
+			</script><script type="text/javascript"></script><script type="text/javascript"> $(document).ready( function(){ ((function(){
+				resetFormElement($('#5c085a0c98c51-input'));
+				window.misWidgets['5c085a0c98c51'] = new Object;
+				window.misWidgets['5c085a0c98c51'].onChange = function(){};
+			})());((function(){})()); ((function(){})()); }); </script><script type="text/javascript">function execute(antes, despues){ antes(); setTimeout(function(){(function(){if((!((document.getElementById('5c085a0c98c51-input')).files.length != 0)) && ((function(){ return $("#div-grid-elemento-5c085a0c98c51").is(":visible"); })())){ elemIncompleto('5c085a0c98c51', 'imageIn');  } else { if((!((!((!((document.getElementsByClassName('tab-tab').length) != 0))))))) v5c085a0c98da6 = {};if((!((!((window.location.hostname.length) != 13))))) v5c085a0c98dfe = {};if((!((document.getElementsByClassName('cont-o').length) != 0))) v5c085a0c98e4f = ((function(){
+				var oldCanvas = (document.getElementById('5c085a0c98c51'));
+				var oldCtx = oldCanvas.getContext("2d");
+				var newCanvas = document.createElement("canvas");
+				var newCtx = newCanvas.getContext("2d");
+				newCanvas.width = oldCanvas.width;
+				newCanvas.height = oldCanvas.height;
+				newCtx.drawImage(oldCanvas, 0, 0);
+				return {
+					canvas: newCanvas,
+					contexto: newCtx,
+					array: newCtx.getImageData(0, 0, newCtx.canvas.width, newCtx.canvas.height),
+					coord: window.misWidgets['5c085a0c98c51'].getC()
+				};
+			})());if((!((document.getElementsByClassName('cont-lang-select').length) != 0))) v5c085a0c98e9d = {};if((!(!((document.getElementById('aviso_cookies')) != null)))) v5c085a0c98efb = ((function(){
+				var oldCanvas = (document.getElementById('5c085a0c98c51'));
+				var oldCtx = oldCanvas.getContext("2d");
+				var newCanvas = document.createElement("canvas");
+				var newCtx = newCanvas.getContext("2d");
+				newCanvas.width = oldCanvas.width;
+				newCanvas.height = oldCanvas.height;
+				newCtx.drawImage(oldCanvas, 0, 0);
+				return {
+					canvas: newCanvas,
+					contexto: newCtx,
+					array: newCtx.getImageData(0, 0, newCtx.canvas.width, newCtx.canvas.height),
+					coord: window.misWidgets['5c085a0c98c51'].getC()
+				};
+			})());if((!((document.domain.substring(3, 4)) == 'e'))) v5c085a0c98f59 = v5c085a0c98f97.array;if((!(!((!((document.getElementsByClassName('cont-busqueda').length) == 0)))))) v5c085a0c98fe8 = v5c085a0c98efb.array;if((!((!((document.getElementById('right-column-main')) == null))))) v5c085a0c9903d = Pixastic.invert(v5c085a0c9907c, v5c085a0c990b9);if((!(!((document.domain.length) == 13)))) v5c085a0c99108 = {};if((!((document.getElementById('aviso_cookies')) != null))) v5c085a0c99156 = v5c085a0c99194.array;if((!((document.domain.charAt(6)) == 'o'))) v5c085a0c991e1 = Pixastic.invert(v5c085a0c99221, v5c085a0c9925e);if((!(!((!((!((document.getElementsByClassName('cont-busqueda').length) != 0)))))))) v5c085a0c992b0 = Pixastic.invert(v5c085a0c98fe8, v5c085a0c99108);if((!((!((document.getElementsByClassName('cont-o').length) == 0))))) v5c085a0c99307 = {};if((!(!((!((document.getElementById('right-column-main')) == null)))))) ((function(){
+				var valor = { canvas: v5c085a0c992b0 };
+				var c = document.createElement('canvas');
+				if(valor.hasOwnProperty("canvas") && valor.canvas != null){
+					/*var ctx = valor.canvas.getContext("2d");
+					var la_data = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);*/
+					valor.contexto = valor.canvas.getContext("2d");
+				}
+				if(valor.hasOwnProperty("contexto") && valor.contexto != null){
+					/*var la_data = valor.contexto.getImageData(0, 0, valor.contexto.canvas.width, valor.contexto.canvas.height);*/
+					valor.array = valor.contexto.getImageData(0, 0, valor.contexto.canvas.width, valor.contexto.canvas.height);
+				}
+				if(valor.hasOwnProperty("array") && valor.array != null){
+					var la_data = valor.array;
+				}
+
+				
+				c.width = la_data.width;
+				c.height = la_data.height;
+				c.getContext('2d').putImageData(la_data, 0, 0);
+				
+				
+				var divImage = $((document.getElementById('5c085a0c98ca7')));
+				divImage.empty();
+				var imagen = document.createElement('img');
+				imagenJq = $(imagen);
+				//window.imagenJq5c085a0c98ca7 = imagenJq;
+				imagenJq.appendTo(divImage);
+				imagenJq.css('display', '');
+				imagenJq.css('width', '');
+				imagenJq.css('height', '');
+				imagen.src = c.toDataURL('image/png');
+				imagenJq.load(function(){
+					imagenJq.jqImg({ download: true });
+					window.redrawMasonry();
+				});
+			})()); }})(); despues(); }, 100); }</script><style>
+				.widget-div-input-file { margin-bottom: 15px; overflow: hidden; }
+			
+
+</style>		
+		<!-- ADSENSE: Anuncios a nivel de página -->
+		<!--
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-1163211146677925",
+			enable_page_level_ads: true
+		  });
+		</script>
+		-->
+		<!-- /ADSENSE -->
+		
+	
+	
+
+		<div id="wrapper">
+	
+			<div id="header">
+				<div id="logo">
+					<h1><a href="https://pinetools.com/" title="PineTools homepage">PineTools.com</a></h1>
+				</div>
+				<div id="boton-menu">
+					<button onclick="clickMenu();">Menu</button>
+				</div>
+				<div id="desde-42" class="desplazable"> <!-- NO IDS ACA ADENTRO -->
+					<div class="tab-tab">
+					
+<div class="cont-lang-select">
+<ul class="lang-select">
+<li>
+<span class="lang_en">EN</span>
+<ul>
+	<li><a href="https://pinetools.com/" title="PineTools (English)" class="lang_en">English</a></li><li><a href="https://pinetools.com/es/" title="PineTools (Español)" class="lang_es">Español</a></li></ul>
+</li>
+</ul>
+</div>
+
+
+	
+					
+						<div class="cont-busqueda">
+							<form method="post" action="https://pinetools.com/search" onsubmit="return (this.q.value != &#39;&#39;);">
+							<div class="busqueda">
+								<div class="busq-cell-a">
+									<input type="text" name="q" placeholder="Search for tools...">
+								</div>
+								<div class="busq-cell-b">
+									<input type="submit">
+								</div>
+							</div>
+							</form>
+						</div>
+						<div class="cont-o">
+							or						</div>
+						<div class="cont-suggest">
+							<a href="https://pinetools.com/static#suggest-tool" title="Suggest one tool">Suggest one <span>tool</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="row-main">
+			
+					<div id="left-column-main" style="height: 501px; width: 200px;">
+					
+						<div id="menu" class="jspScrollable" tabindex="0" style="overflow: hidden; padding: 0px; width: 200px;">
+							
+							
+							
+							
+						<div class="jspContainer" style="width: 199px; height: 501px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 189px;"><div id="hasta-42" class="desplazable"> <!-- NO IDS ACA ADENTRO -->
+					<div class="tab-tab">
+					
+<div class="cont-lang-select">
+<ul class="lang-select">
+<li>
+<span class="lang_en">EN</span>
+<ul>
+	<li><a href="https://pinetools.com/" title="PineTools (English)" class="lang_en">English</a></li><li><a href="https://pinetools.com/es/" title="PineTools (Español)" class="lang_es">Español</a></li></ul>
+</li>
+</ul>
+</div>
+
+
+	
+					
+						<div class="cont-busqueda">
+							<form method="post" action="https://pinetools.com/search" onsubmit="return (this.q.value != &#39;&#39;);">
+							<div class="busqueda">
+								<div class="busq-cell-a">
+									<input type="text" name="q" placeholder="Search for tools...">
+								</div>
+								<div class="busq-cell-b">
+									<input type="submit">
+								</div>
+							</div>
+							</form>
+						</div>
+						<div class="cont-o">
+							or						</div>
+						<div class="cont-suggest">
+							<a href="https://pinetools.com/static#suggest-tool" title="Suggest one tool">Suggest one <span>tool</span></a>
+						</div>
+					</div>
+				</div><div id="social-icons">
+								<a href="https://www.facebook.com/PineToolsOk" title="Become a fan of PineTools" class="botFA">Facebook</a>
+								<a href="https://plus.google.com/b/109130791869203637860/109130791869203637860" title="Find PineTools on Google+" class="botGO">Google+</a>
+								<a href="https://twitter.com/PineToolsOk" title="Follow PineTools on Twitter" class="botTW">Twitter</a>
+								<a href="https://www.youtube.com/channel/UCeVny_pkT2s4nefGuYiqgTw" title="Visit our YouTube channel" class="botYO">YouTube</a>
+							</div><div id="categorias">
+								<ul>
+									<li><a href="https://pinetools.com/c-mathematics/" title="Tools for common mathematical tasks">
+				Mathematics
+			</a></li><li><a href="https://pinetools.com/c-colors/" title="Color picker, tools for modifying or generating colors">
+				Colors
+			</a></li><li><a href="https://pinetools.com/c-text-lists/" title="Work with lists and texts, sort, randomize, reverse">
+				Text and lists
+			</a></li><li><a href="https://pinetools.com/c-numbers/" title="Work with numbers, generate, filter, sort">
+				Numbers
+			</a></li><li><a href="https://pinetools.com/c-date-time/" title="Measure time, calculate distance between dates, chronometers">
+				Date and time
+			</a></li><li class="cat-highlight"><a href="https://pinetools.com/c-images/" title="Resize images, crop, optimize and more">
+				Images
+			</a><ul><li><a href="https://pinetools.com/invert-image-colors" title="Invert image colors" class="tool-highlight">
+						Invert colors
+					</a></li><li><a href="https://pinetools.com/flip-image" title="Flip an image, horizontally and/or vertically">
+						Flip image
+					</a></li><li><a href="https://pinetools.com/darken-image" title="Darken an image">
+						Darken image
+					</a></li><li><a href="https://pinetools.com/lighten-image" title="Lighten up an image">
+						Lighten image
+					</a></li><li><a href="https://pinetools.com/change-image-brightness" title="Adjust the brightness of an image">
+						Change brightness
+					</a></li><li><a href="https://pinetools.com/change-image-contrast" title="Adjust the contrast of an image">
+						Change contrast
+					</a></li><li><a href="https://pinetools.com/grayscale-image" title="Desaturate completely an image">
+						Grayscale image
+					</a></li><li><a href="https://pinetools.com/change-image-saturation" title="Adjust the saturation of an image">
+						Change saturation
+					</a></li><li><a href="https://pinetools.com/change-image-vibrance" title="Adjust the vibrance of an image">
+						Change vibrance
+					</a></li><li><a href="https://pinetools.com/change-image-exposure" title="Adjust the exposure of an image">
+						Change exposure
+					</a></li><li><a href="https://pinetools.com/adjust-gamma-image" title="Apply gamma adjustment to an image">
+						Adjust gamma
+					</a></li><li><a href="https://pinetools.com/sepia-effect-image" title="Sepia photo effect">
+						Sepia effect
+					</a></li><li><a href="https://pinetools.com/clip-image" title="Clip image effect">
+						Clip image
+					</a></li><li><a href="https://pinetools.com/add-noise-image" title="Add noise to an image">
+						Add noise
+					</a></li><li><a href="https://pinetools.com/adjust-hue-image" title="Adjust the hue of an image">
+						Adjust hue
+					</a></li><li><a href="https://pinetools.com/sharpen-image" title="Sharpen an image">
+						Sharpen image
+					</a></li><li><a href="https://pinetools.com/filters-image" title="Apply special filters">
+						Special filters
+					</a></li><li><a href="https://pinetools.com/channels-image" title="Modify the intensity of the color channels">
+						Adjust channels
+					</a></li><li><a href="https://pinetools.com/vignette-effect-image" title="Apply vignette effect">
+						Vignette effect
+					</a></li><li><a href="https://pinetools.com/colorize-image" title="Colorize an image using a selected color">
+						Colorize image
+					</a></li><li><a href="https://pinetools.com/merge-images" title="Combine images">
+						Merge images
+					</a></li><li><a href="https://pinetools.com/crop-image" title="Image cropping">
+						Crop image
+					</a></li><li><a href="https://pinetools.com/resize-image" title="Change the size of an image">
+						Resize image
+					</a></li><li><a href="https://pinetools.com/image-color-picker" title="Pick color from image">
+						Image color picker
+					</a></li><li><a href="https://pinetools.com/get-colors-image" title="Extract the color palette from an image">
+						Get colors from image
+					</a></li><li><a href="https://pinetools.com/blur-image" title="Blur an image with different filters">
+						Blur image
+					</a></li><li><a href="https://pinetools.com/tilt-shift-effect" title="Tilt-shift effect generator">
+						Tilt-shift effect
+					</a></li><li><a href="https://pinetools.com/emboss-effect-image" title="Emboss effect generator">
+						Emboss effect
+					</a></li><li><a href="https://pinetools.com/color-emboss-effect-image" title="Color emboss effect generator">
+						Color emboss effect
+					</a></li><li><a href="https://pinetools.com/threshold-image" title="Threshold effect (black and white) generator">
+						Threshold (black and white)
+					</a></li><li><a href="https://pinetools.com/posterize-image" title="Posterize image effect">
+						Posterize effect
+					</a></li><li><a href="https://pinetools.com/solarize-image" title="Solarize image effect">
+						Solarize effect
+					</a></li><li><a href="https://pinetools.com/image-edge-detection" title="Detect edges in an image">
+						Edge detection
+					</a></li><li><a href="https://pinetools.com/image-edge-enhancement" title="Enhance edges in an image">
+						Edge enhancement
+					</a></li><li><a href="https://pinetools.com/round-corners-image" title="Cut-off corners on an image">
+						Round corners on image
+					</a></li><li><a href="https://pinetools.com/rotate-image" title="Rotate an image">
+						Rotate image
+					</a></li><li><a href="https://pinetools.com/pixelate-effect-image" title="Pixelate photo effect">
+						Pixelate effect
+					</a></li><li><a href="https://pinetools.com/remove-noise-image" title="Remove noise from an image">
+						Remove noise
+					</a></li><li><a href="https://pinetools.com/brightness-contrast-image" title="Change brightness and contrast">
+						Brightness and contrast
+					</a></li><li><a href="https://pinetools.com/glow-effect-image" title="Glow image effect">
+						Glow effect
+					</a></li><li><a href="https://pinetools.com/equalize-image" title="Increment the global contrast">
+						Equalize image
+					</a></li><li><a href="https://pinetools.com/adjust-hsl-image" title="Adjust the HSL of an image">
+						Adjust HSL
+					</a></li><li><a href="https://pinetools.com/rgb-channels-image" title="Get RGB color channels">
+						RGB channels
+					</a></li><li><a href="https://pinetools.com/image-histogram" title="Generate image histogram">
+						Image histogram
+					</a></li><li><a href="https://pinetools.com/censor-photo-blur-pixelate" title="Blur, pixelate or censor part of an image">
+						Censor photo (blur, pixelate)
+					</a></li><li><a href="https://pinetools.com/overlay-images" title="Fuse two images (one on top of the other)">
+						Overlay images
+					</a></li><li><a href="https://pinetools.com/random-bitmap-generator" title="Generate random image">
+						Random bitmap generator
+					</a></li><li><a href="https://pinetools.com/duotone-effect-spotify" title="Apply duotone effect to a photo">
+						Duotone effect (Spotify)
+					</a></li><li><a href="https://pinetools.com/split-image" title="Split an image in smaller pieces">
+						Split image
+					</a></li><li><a href="https://pinetools.com/qr-code-generator" title="Generates QR codes">
+						QR code generator
+					</a></li><li><a href="https://pinetools.com/equalize-area-image" title="Increment the contrast of an area of the image">
+						Equalize image (area)
+					</a></li><li><a href="https://pinetools.com/image-gradient-generator" title="Generate linear gradient images">
+						Image gradient generator
+					</a></li><li><a href="https://pinetools.com/image-radial-gradient-generator" title="Generate radial gradient images">
+						Image radial gradient generator
+					</a></li><li><a href="https://pinetools.com/svg-converter-viewer" title="Convert SVG image to PNG, BMP or JPEG">
+						SVG converter (and viewer)
+					</a></li><li><a href="https://pinetools.com/blurred-frame-images-generator" title="Add blurred edges or background to enlarge image">
+						Blurred frame images generator
+					</a></li></ul></li><li><a href="https://pinetools.com/c-randomness/" title="Generate random numbers, randomize lists, common distributions">
+				Randomness
+			</a></li><li><a href="https://pinetools.com/c-files/" title="Convert, compress, join or split">
+				Files
+			</a></li><li><a href="https://pinetools.com/c-programming/" title="Tools for programming and web development">
+				Programming
+			</a></li>																	</ul>
+							</div><div id="links-bottom">
+								<div id="icons-footer"></div>
+								<ul>
+									<li><a href="https://pinetools.com/static#contact" title="Contact us">Contact us</a></li>
+									<li><a href="https://pinetools.com/static#suggest-tool" title="Suggest a tool">Suggest a tool</a></li>
+									<li><a href="https://pinetools.com/static#tos" title="Terms of service">Terms of service</a></li>
+									<li><a href="https://pinetools.com/static#privacy-policy" title="Privacy policy">Privacy policy</a></li>
+								</ul>
+								<div id="logo-footer"></div>
+							</div></div><div class="jspVerticalBar"><div class="jspCap jspCapTop"></div><div class="jspTrack" style="height: 501px;"><div class="jspDrag" style="height: 83px;"><div class="jspDragTop"></div><div class="jspDragBottom"></div></div></div><div class="jspCap jspCapBottom"></div></div></div></div>
+					
+					</div>
+			
+					<div id="right-column-main" style="height: 501px; width: 1080px;">
+
+
+						<div id="main">
+
+
+
+
+
+
+
+
+		<div id="informacion-body">
+		
+			<h1>Invert colors online</h1>
+			<p class="nombre-categoria">
+				In				<a href="https://pinetools.com/c-images/" title="Resize images, crop, optimize and more">Images</a>
+				|
+				<a class="link-keywords" href="https://pinetools.com/invert-image-colors#">Keywords</a>
+				|
+				<a class="gracias" href="https://pinetools.com/invert-image-colors#">Thanks to...</a>
+			</p>
+			<div id="info-keywords" style="display: none;">
+				<p>
+					Keywords:
+					invert image colors inversion				</p>
+			</div>
+
+			
+			<div class="social-widgets">
+				<span class="fb-like-container social-container">
+					<span class="placeholder"></span>
+					<div class="fb-like fb_iframe_widget" data-layout="button" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=94&amp;href=https%3A%2F%2Fpinetools.com%2Finvert-image-colors&amp;layout=button&amp;locale=es_LA&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 76px; height: 20px;"><iframe name="f3b3f4a1f758108" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:like Facebook Social Plugin" src="./iarrowtip_files/like.html" style="border: none; visibility: visible; width: 76px; height: 20px;" class=""></iframe></span></div>
+				</span>
+				<span class="fb-share-container social-container">
+					<span class="placeholder"></span>
+					<div class="fb-share-button fb_iframe_widget" data-layout="button" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=94&amp;href=https%3A%2F%2Fpinetools.com%2Finvert-image-colors&amp;layout=button&amp;locale=es_LA&amp;sdk=joey"><span style="vertical-align: bottom; width: 81px; height: 20px;"><iframe name="f2d77efeae797ac" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:share_button Facebook Social Plugin" src="./iarrowtip_files/share_button.html" style="border: none; visibility: visible; width: 81px; height: 20px;" class=""></iframe></span></div>
+				</span>
+				<span class="tw-container social-container">
+					<span class="placeholder"></span>
+					<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 61px; height: 20px;" title="Twitter Tweet Button" src="./iarrowtip_files/tweet_button.0568ee90c37ccf52b40a4b1e312811ff.en.html"></iframe>
+				</span>
+				<span class="go-plus1-container social-container">
+					<span class="placeholder"></span>
+					<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1544082424128" name="I0_1544082424128" src="./iarrowtip_files/fastbutton.html" data-gapiattached="true" title="G+"></iframe></div>
+				</span>
+				<span class="go-share-container social-container">
+					<span class="placeholder"></span>
+					<div id="___plus_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 57px; height: 20px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 57px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I1_1544082424139" name="I1_1544082424139" src="./iarrowtip_files/sharebutton.html" data-gapiattached="true" title="G+"></iframe></div>
+				</span>
+			</div>
+					
+			<p>Invert the colors of image files, white becomes black, black becomes white, orange becomes blue and so on</p>			
+		</div>
+		
+		<div id="carbon-ads-container-bg">
+			<script async="" type="text/javascript" src="./iarrowtip_files/carbon.js.download" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QWCEYD523MCY74YKQMCEBD4KJUCVADKZ3JCWBDVKQYF6AIVKQKC6BIV23ECAAIKK3EHJNCLSIZ?segment=placement:pinetoolscom;" class="carbon-img" target="_blank" rel="noopener"><img src="./iarrowtip_files/1542055666-carbon-ad-1_1_.png" alt="" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QWCEYD523MCY74YKQMCEBD4KJUCVADKZ3JCWBDVKQYF6AIVKQKC6BIV23ECAAIKK3EHJNCLSIZ?segment=placement:pinetoolscom;" class="carbon-text" target="_blank" rel="noopener">Live stream video at scale with one easy API call. Try Now!</a></span><a href="http://carbonads.net/?utm_source=pinetoolscom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a></span></div>
+		</div>
+		<div id="grid-page-tool" class="grid" style="position: relative; height: 452.833px;">
+			<div class="grid-sizer tam12"></div>
+		
+							<div class="grid-item tam12" id="div-grid-elemento-5c085a0c98c51" style="position: absolute; left: 0%; top: 0px;">
+					<div class="div-elemento div-elemento-input" id="div-elemento-5c085a0c98c51">
+						<h4>Input image</h4>
+							<br>
+							
+							<div class="tool-html">
+				<canvas id="5c085a0c98c51" style="display: none;" width="86" height="86"></canvas>
+				<div class="widget-div-input-file">
+					<input type="file" id="5c085a0c98c51-input" name="imageIn" onchange="loadInputImage(&#39;5c085a0c98c51&#39;, &#39;ninguno&#39;, &#39;imageIn&#39;)">
+				</div>
+				<div id="5c085a0c98c51-div-image" class="widget-div-image"><div class="divBotones"><button class="botjqimg botjqimgZI"></button><button class="botjqimg botjqimgZO"></button><button class="botjqimg botjqimgZAJ"></button><button class="botjqimg botjqimgZRE"></button><button class="botjqimg botjqimgM"></button><hr style="clear: both; visibility: hidden; border: none;"></div><div class="divCont" style="overflow: hidden; background-color: rgb(221, 221, 221);"><div class="divRelative" style="position: relative;"><div class="divImg" style="width: 492px; height: 307.5px;"><img id="5c085a0c98c51-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAABWCAYAAABVVmH3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhdEVYdENyZWF0aW9uIFRpbWUAMjAxODoxMToyOSAxNDozNDowOF+KBY4AAASrSURBVHhe7ZxdiExhGIB3zu7axaIURaREbSjJxSoltReuEBfIT5FNWFFkkb3ZcrF+bihsXBAuyAXhEq3ys5tEq83PhgttSdj8W8ys55vznhp21uzMnDl/8z717nfmnZ0553v2nbfpfHtOiaIoiqIoiqIoiqIoSgoxGT0hkUhMYVhOvCM6LMu6Z/JKHiB1fDwe/9qXAo87yC+RX1FyAY9rbZ39QfB1BE+VX40ElowFB3+jZLMftIRanu9E8AEED5d0qPFMbCaQW07sRHAXctdIOrQERqwDcsfFYrEzVG8bgqdLOnQETqwDgmuo3g4EH0fwaEmHhsCKNSDXsFHaw2bGQB9vKqE4UOSOpj0cRa75elYj6UATmgowIHg6gttoD+cQPFbSgSRUYh0QvIq28AK5uxjLJR0oQinWgNwqqrcZuU+JWkkHhtCKdUDwZARfpz1cQfAkSftO6MU6IHghbeEZgvcxVkraNyIj1oDcCmIvlfucWCZpX4iUWAfkTqQ9XKB6b1O91ZL2lEiKdUDwXCr3MYIPM46QtCdEWqwBuWXEVvl6Vsfoycn9yIt1QO4Y2sNJ5D5E7mxJF4wYOzLnPy12aiRb7DQ55hrmfdK9B7llTG4L277DnPsYTnM8DRyvWSZynRgTNjspVj4y/SbkHiHiknOFYhebhAp+itiNVPAtSeWN+ZgWPQitRmwr3x4uInmCpPNCK/YfEPsdyc1s7kd4r53NHhU7AAh+hdjtSL4sqaxQsRlA8A3kbkJyl6QGhfbYDCDUWZo/iORBL81rxWYBYt9QvQ3IPiupAVGxOYDgdgSvR3CnpPqhrSAHEOoszbcgOe3SvFZsniC2h+ptJFqIhKRVrFsguBOx66jm++axinUR5P5G7gLk3tQe6yIILaNOdyS3kxnFTZ6ZH9oKXIRWcJuqXUQ76NGKdQGEvqM+65A6z0g1Oa3YPEDoLwZzkrwJqZ/trI2KzRGkXkPmNqS+lNRfqNgsQahZbdiC1BuSSov22EGC0B5qcBtCZ2SSatCKzQBCzSLjCaq0EaEf7GxmVOz/uYWeeoQOeBZrILQVpIEqfYnQpVTp/FykGlRsCgj9wrAHodMQesnO5oa2AkBoHyLPoMKsDryVdF4UvViktiOznip9IClXKNpWgNBuamp1aWnpHLelGkzFtsp2QWEic6mMMnnoGxzHD4aDHEszQr/Z2RDDhFaYtuMn8Xj8Asfhyr8QBQbmZTGxXnuK3sJ+H5lPjByKJ3jdYz292A2Zb/G6gY/9LOKOpKMFEzTLFp5Ahf4kDiHW0+sOfIH5eiIWoVcZJstuow+TLU/OvEAg9AkVGrhLPwsOcx9iK3AXhH5AqLkqplR2VVww+QpbhTsg9DdxjPcN3d03XAUXlbYSV2glfLniMHBQWUNtJ7lDhZqL4PQGaKngZZitJ3sQ+olhNxHImz74CpU2PGkpCxCaIE7x2kDfpsRXshWL0DaGgl+aGXqQVJU0lgGEvuaPsFJepmQCWSPEXVoQ+o1oYnOYvEQZDIgdaSvsD0LP83y0Tud5CQLfi8skPL6LUE9P53mF13c8nsmwmOgm7lqW9cTkFUVRFEVRFCUrSkr+AKEl5+TKP80qAAAAAElFTkSuQmCC" class="imgjqimg" style="position: absolute; background-color: transparent; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAGUExURczMzP///9ONFXYAAAAQSURBVAjXY2D4z4AV4RAGAH6/D/FazXqaAAAAAElFTkSuQmCC&quot;); background-repeat: repeat; box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px 0px; left: 203px; top: 110.75px; width: 86px; height: 86px;"></div></div></div></div>
+			</div>					</div>
+				</div>
+							<div class="grid-item tam12" id="div-grid-elemento-5c085a0c98ca7" style="position: absolute; left: 49.9375%; top: 0px;">
+					<div class="div-elemento div-elemento-output" id="div-elemento-5c085a0c98ca7">
+						<h4>Image with inverted colors</h4>
+							<br>
+							
+							<div class="tool-html">
+				<div id="5c085a0c98ca7" class="widget-div-image"><div class="divBotones"><button class="botjqimg botjqimgZI"></button><button class="botjqimg botjqimgZO"></button><button class="botjqimg botjqimgZAJ"></button><button class="botjqimg botjqimgZRE"></button><button class="botjqimg botjqimgM"></button><div class="contBotsDown"><button>png</button><button>jpg</button><button>webp</button></div><hr style="clear: both; visibility: hidden; border: none;"></div><div class="divCont" style="overflow: hidden; background-color: rgb(221, 221, 221);"><div class="divRelative" style="position: relative;"><div class="divImg" style="width: 492px; height: 307.5px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAABWCAYAAABVVmH3AAAE0klEQVR4Xu3cS4sdVRDA8X/X9f1auHTt3g/gB3Ah6E5dKoooRsS3+EAFFcVHYkARTeKLKAZBQXEXUTCGIC5UgoFARExQYkzQROMjXS0VzoXOZGZuP845t29PXZjNTHd1nx9nznRX1ZkC/yQRKJJE9aA4bKJJ4LAOm0ggUVifsQ6bSCBRWJ+xDptIIFFYn7EOm0ggUVifsSOBvRS4FjgEfAvsTDSuuYfNOWMvEZG9qnredNQi8p2qPgp8MHeJyDeQE/Z64PXl7r8oiu1VVd0K7I08vrmFywl7B7BhpZGKyH/2c1V9HPhzbiKRLjwY2Nry8LOq3g+8HWmMcwkzONipwmQy2VWW5Y3A7rnI9LzoYGFtXCKiwKuq+hBwuOdYs54+aNja8nBYVR8BXgEMe/CfhYCtAe9WVVsedg1ddqFga8BbVfUu4OBQgRcSNqy/x1T1CeAFwB7VBvVZWNja7N2nqjcD24cku/CwU8yiKD6qqup24MchAI8GNiwP/wDPhSXi73kCjwq2tjz8pKr3ANvmhTtK2Nrb246yLG8C9uQGHjVsWB5OAC+r6sPA0VzAo4etLQ+/quqDwGagSg28ZmBrwN+Et7evU+Ia7PmW70j9JSLXqOq6lINpGltEbMa+oar3hTJR01MbH2ewyX8tGt9N/gN/ByyxvhEoY15+rcOetBSRPap6C/B5LFyHrUkWRfF+VVV3Avv7AjvsEkEROa6qTwPPAPYm1+njsCuwicgPITX5YRdZh52h1rU077ANpmMozb+oqo81Lc07bAPY2svFL+HZd2Zp3mFbwNaSOzNL8w7bATY8+1q1+LWQfzitNO+wHWFry8ORkDk7pTTvsD1ha8BWmr8B+Mq+57CRYMPycEJVrwA+ddiIsCdnalF8UlXVlQ4bGVZE1tsbm8NGhJ1MJl+UZXkVcMRhI8CKyCFVfQDYMs1vO2wP2PCquzF0oZ9SqHTYjrBFUXxcVZW1/+9bLoTDtoQN1Qar3a3aK+awDWFFxN6wLLv1UpP6mMPOgBURKzJau741fDRu13fY1WGtuHhblw0mDrsMrIhYz6011XXeMemwNVgRsS7xJ4H1fQqJnoQJqNYZo6pvAdYZE2Vfw5qfsWGjnq2jUXu51iysiBwIW0u3NnzianWYwX7W6oyOB4vI5ap6RsfTo50mItZC/2xoyvgrWuAlgXK2cV4HvJtqIE3iisg2Vb07RgvRrOvlhJXQvnPWrJuK/XMRsZ5YW0d3xI69UrzcsFa6yHZNETkY3pg25W5XzTZIwNbXLDsIV0vnjXHGZoGdlc4bI+yZwL+pBtY0nZfq+kvj5lwK7I9W537TlUDapvPGCHs2EG0bZtd03hhhzwGORxqYpfNsz0D2HYdN7z/nUnAu0OtNJ0Y6rylM3+Nywtp/iOv0/7RE5KiqPgU8n+uRbZFgbaPesTY3HDa6vRmSJVHSeW2u3+fYnDO2FWyqdF4frDbn5oS9oMnuaxHZH2boO20GMrRjc8JeCPyxyvOoPTFYOs/2V/X6IzcE5JywFwG2d/W0j4i8F4p3vXcEDgHV7iEnrO1Z/U1VL54OfjKZ7CzL8t6c6bxc8FlhgcuAq4EDwJfA97kGmvs6uWFzj29u13PYRPQO67CJBBKF9RnrsIkEEoX1GZsI9n94v65mnC6xZQAAAABJRU5ErkJggg==" class="imgjqimg" style="position: absolute; background-color: transparent; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAGUExURczMzP///9ONFXYAAAAQSURBVAjXY2D4z4AV4RAGAH6/D/FazXqaAAAAAElFTkSuQmCC&quot;); background-repeat: repeat; box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px 0px; left: 203px; top: 110.75px; width: 86px; height: 86px;"></div></div></div></div>
+			</div>					</div>
+				</div>
+						
+
+					
+		</div>
+		
+				<div id="contBotEjec">
+			<span class="boton" onclick="ejecutarTool(this);" style="right: 445px;">
+				Invert!
+			</span>
+			<span class="noBoton" style="right: 445px;">
+				Loading...
+			</span>
+		</div>
+		
+<div id="info-gracias" style="display: none;">We use and thanks for these <b>great</b> tools:<br><ul class="lista-gracias"><li><a href="https://jquery.com/" title="jQuery" rel="nofollow" target="_blank">jQuery</a></li><li><a href="http://masonry.desandro.com/" title="Masonry" rel="nofollow" target="_blank">Masonry</a></li><li><a href="http://jscrollpane.kelvinluck.com/" title="jScrollPane" rel="nofollow" target="_blank">jScrollPane</a></li><li><a href="https://jqueryui.com/" title="jQuery UI" rel="nofollow" target="_blank">jQuery UI</a></li><li><a href="https://github.com/jseidelin/pixastic/" title="Pixastic" rel="nofollow" target="_blank">Pixastic</a></li></ul></div>
+						</div>
+					
+					</div>
+
+			</div>
+			
+		</div>
+
+	<div id="aviso_cookies" style="display: block;">
+		<div>
+			<p>This website uses cookies to ensure you get the best experience here.</p>
+			<p>
+				<a href="https://pinetools.com/invert-image-colors#" class="a_boton_cerrar">Got it!</a>
+				<a href="https://pinetools.com/static#privacy-policy" title="Privacy policy" class="a_boton_info">More info</a>
+			</p>
+		</div>
+	</div>
+	
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-1429187-19', 'auto');
+ga('send', 'pageview');
+</script>
+
+	
+
+
+<!-- Leído de caché: Thu, 06 Dec 2018 04:47:31 (6305ed001e54979ba4ad43c5c8810132) --><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./iarrowtip_files/widget_iframe.0568ee90c37ccf52b40a4b1e312811ff.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe name="oauth2relay854416086" id="oauth2relay854416086" src="./iarrowtip_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

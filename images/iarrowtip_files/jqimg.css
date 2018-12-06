@@ -1,0 +1,90 @@
+
+.botjqimg {
+	background: #EEE url('jqimg.png') no-repeat 0 0;
+	width: 36px;
+	height: 36px;
+	border: 1px #777 solid;
+	display: inline-block;
+	float: left;
+	margin: 0 5px 5px 0;
+}
+
+.divSelectPointH, .divSelectPointV {
+	background: repeating-linear-gradient(
+		45deg,
+		#DDD,
+		#DDD 7px,
+		#222 7px,
+		#222 14px
+	);
+}
+
+.botjqimg.aprtdo {
+	background-color: #FFF;
+	box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.29);
+}
+
+.botjqimgZI { background-position: 4px center; }
+.botjqimgZO { background-position: -39px center; }
+.botjqimgZAJ { background-position: -82px center; }
+.botjqimgZRE { background-position: -126px center; }
+.botjqimgM { background-position: -168px center; }
+.botjqimgP { background-position: -211px center; }
+
+.contBotsDown {
+	margin-top: 3px;
+	display: inline-block;
+	float: left;
+	background: transparent url('jqimg.png') no-repeat -325px center;
+	padding-left: 40px;
+	margin-left: 10px;
+}
+
+.contBotsDown button {
+	display: inline-block;
+	float: left;
+	height: 25px;
+	margin: 3px 0;
+	padding-top: 3px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+	font-family: inherit;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.contBotsDown button:hover {
+	color: #77A6F1;
+}
+
+.imgjqimg.imZoomIn { cursor: -webkit-zoom-in; cursor: -moz-zoom-in; }
+.imgjqimg.imZoomOut { cursor: -webkit-zoom-out; cursor: -moz-zoom-out; }
+.imgjqimg.imMove { cursor: move; }
+.imgjqimg.imPick { cursor: crosshair; }
+
+.divSelectPoint.imPick { cursor: crosshair; }
+
+.divSelectArea {
+	border: 1px solid #000;
+	background-color: rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	cursor: move;
+}
+.nwgrip, .negrip, .swgrip, .segrip, .ngrip, .egrip, .sgrip, .wgrip {
+	width: 10px;
+	height: 10px;
+	background-color: #FFF;
+	border: 1px solid #000;
+}
+.ngrip, .sgrip { width: 6px; }
+.egrip, .wgrip { height: 6px; }
+.nwgrip { left: -5px; top: -5px; }
+.negrip { top: -5px; right: -5px; }
+.swgrip { bottom: -5px; left: -5px; }
+.segrip { bottom: -5px; right: -5px; }
+.ngrip { top: -5px; left: 50%; margin-left: -4px; }
+.sgrip { bottom: -5px; left: 50%; margin-left: -4px; }
+.wgrip { left:-5px; top: 50%; margin-top: -4px; }
+.egrip { right:-5px; top:50%; margin-top: -4px; }

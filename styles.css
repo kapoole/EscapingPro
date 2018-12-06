@@ -2,3 +2,83 @@
     background-color: green;
     color: white;
 }
+
+.check {
+    border: 5px solid green;
+}
+
+.fullwidth {
+    width: 100vw;
+}
+
+.navbar-brand {
+    max-width: 20%;
+    text-align: left;
+}
+
+.navbar-brand img {
+    max-width: 100%; /* 25% */
+    height: auto;
+
+}
+
+.drop {
+    text-align: center;
+    
+}
+
+
+.color3 {
+    background-color: blue;
+    position: absolute;
+    height: 25%;
+    
+}
+
+.color1 {
+    background-color: #80643D;  /* #80643D */
+    height: 50%;
+}
+
+.color2 {
+    background-color: #2BBBAD;
+    border-radius: 0 0 40px 40px;
+    height: 50%;
+}  
+
+.whitetext {
+    color: white;
+}
+
+.whitetext:hover {
+    font-size: 1.5em;
+    padding: .13rem;
+    color: #00695c;
+}
+
+.whitetext:visited {
+    border-bottom: 10px solid white;
+}
+
+.whitelogin {
+    color: white;
+    background-color: #00685c;
+    border-radius: 7px;
+}
+
+.whitelogin:hover {
+    background-color: #A77B54;
+    color: white;
+    padding: .13rem;
+    font-size: 1.5em;
+}
+
+.roomrow {
+    width: 120%;
+}
+
+.room {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
